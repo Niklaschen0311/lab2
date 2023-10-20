@@ -6,13 +6,95 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/Ed_name"
+        android:layout_width="227dp"
+        android:layout_height="57dp"
+        android:ems="10"
+        android:hint="請輸入姓名"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
     <TextView
+        android:id="@+id/Hint"
+        android:layout_width="227dp"
+        android:layout_height="34dp"
+        android:text="請輸入姓名開始猜拳遊戲"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/Ed_name"
+        app:layout_constraintTop_toBottomOf="@id/Ed_name"
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/Hint"
+        app:layout_constraintTop_toBottomOf="@id/Hint"
+
+        <RadioButton
+            android:id="@+id/RB0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="剪刀" />
+
+        <RadioButton
+            android:id="@+id/RB1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="石頭" />
+
+        <RadioButton
+            android:id="@+id/RB2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="抹布" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="235dp"
+        android:layout_height="48dp"
+        android:text="Button"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        tools:layout_editor_absoluteX="18dp" />
+
+    <TextView
+        android:id="@+id/Username"
+        android:layout_width="47dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="18dp"
+        android:text="名稱"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/winner"
+        android:layout_width="57dp"
+        android:layout_height="21dp"
+        android:text="勝利者"
+        app:layout_constraintStart_toEndOf="@+id/Username"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/us"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我方出拳"
+        app:layout_constraintEnd_toStartOf="@+id/winner"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/winner"
+        tools:layout_editor_absoluteY="392dp" />
+
+    <TextView
+        android:id="@+id/computer"
+        android:layout_width="68dp"
+        android:layout_height="23dp"
+        android:text="電腦出拳"
+        app:layout_constraintStart_toEndOf="@+id/winner"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
